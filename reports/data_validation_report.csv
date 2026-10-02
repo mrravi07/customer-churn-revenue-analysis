@@ -1,0 +1,33 @@
+table,check,status,details
+customers,Unique Customer IDs,PASS,"Unique IDs: 50,000"
+customers,Customer ID Not Null,PASS,Null IDs: 0
+customers,Valid Age,PASS,Invalid ages: 0
+customers,Valid Signup Dates,PASS,Invalid dates: 0
+subscriptions,Unique Customer Subscription,PASS,Duplicate customers: 0
+subscriptions,Valid Subscription Plans,PASS,Invalid plans: 0
+subscriptions,Positive Monthly Charges,PASS,Invalid charges: 0
+activity,Non-negative login_count,PASS,Invalid values: 0
+activity,Non-negative session_count,PASS,Invalid values: 0
+activity,Non-negative avg_session_minutes,PASS,Invalid values: 0
+activity,Non-negative features_used,PASS,Invalid values: 0
+activity,Non-negative engagement_score,PASS,Invalid values: 0
+activity,Engagement Score 0-100,PASS,Out of range: 0
+transactions,Unique Transaction IDs,PASS,Duplicates: 0
+transactions,Positive Transaction Amount,PASS,Invalid amounts: 0
+transactions,Valid Transaction Types,PASS,Invalid types: 0
+support,Valid Satisfaction Score,PASS,Invalid scores: 0
+support,Valid Resolution Hours,PASS,Invalid values: 0
+churn,Unique Customer Churn Record,PASS,Duplicates: 0
+churn,Valid Churn Flag,PASS,Invalid flags: 0
+churn,Non-Churn Customers Have No Churn Date,PASS,Violations: 0
+subscriptions,Referential Integrity,PASS,Orphan records: 0
+activity,Referential Integrity,PASS,Orphan records: 0
+transactions,Referential Integrity,PASS,Orphan records: 0
+support,Referential Integrity,PASS,Orphan records: 0
+churn,Referential Integrity,PASS,Orphan records: 0
+customers,NULL Audit,INFO,Total NULL cells: 0
+subscriptions,NULL Audit,INFO,Total NULL cells: 0
+activity,NULL Audit,INFO,Total NULL cells: 0
+transactions,NULL Audit,INFO,Total NULL cells: 0
+support,NULL Audit,INFO,Total NULL cells: 0
+churn,NULL Audit,INFO,"Total NULL cells: 117,306"
