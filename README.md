@@ -1,85 +1,121 @@
-<div align="center">
-
 # Customer Churn & Revenue Analysis
 
-### Customer Analytics | Churn Analysis | Revenue Intelligence
+An end-to-end **Customer Churn & Revenue Analytics** project built to analyze customer behavior, identify churn drivers, quantify revenue at risk, and develop a leakage-free machine learning model for churn prediction.
 
-<p>
-An end-to-end data analytics project focused on understanding customer churn,
-revenue performance, customer behavior, and business KPIs through Python,
-SQL, PostgreSQL, and Power BI.
-</p>
-
-<p>
-<a href="https://github.com/mrravi07/customer-churn-revenue-analysis">
-<img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-</p>
-
-</div>
+The project integrates **Python, Pandas, PostgreSQL, Advanced SQL, Statistical Analysis, Machine Learning, SHAP Explainability, and Power BI** into a complete analytics workflow.
 
 ---
 
-## Overview
+## 📌 Project Overview
 
-**Customer Churn & Revenue Analysis** is an end-to-end analytics project designed to transform raw customer and transaction data into a structured **Customer 360 analytical layer** and actionable business insights.
+Customer churn is one of the most important business problems for subscription-based businesses.
 
-The project covers the complete analytics workflow — from **data profiling and cleaning to PostgreSQL integration, analytical SQL, business KPI development, customer segmentation, churn analysis, revenue analysis, and Power BI visualization**.
+This project analyzes a customer base of **50,000 customers** to answer key business questions:
 
-The objective is to help businesses understand:
+- What percentage of customers are churning?
+- Which customer segments have the highest churn?
+- Does contract type influence churn?
+- How does customer engagement relate to churn?
+- Do failed payments indicate higher churn risk?
+- Does customer support satisfaction relate to churn?
+- How much revenue is associated with churned customers?
+- Which customer characteristics are most important for churn prediction?
+- Can machine learning identify customers with higher churn probability?
+- How can churn insights be converted into actionable business recommendations?
 
-- Which customers are at risk of churn
-- How churn impacts revenue
-- Which customer segments generate the most value
-- Customer purchasing and engagement behavior
-- Revenue contribution across different segments
-- Key business KPIs and performance trends
+The project follows a complete analytics lifecycle from **raw data generation and quality validation to PostgreSQL analytics, machine learning, explainability, and Power BI visualization**.
 
 ---
 
-## Project Architecture
+# 🎯 Business Objectives
+
+### Customer Analytics
+- Analyze customer demographics and subscription behavior.
+- Understand customer engagement patterns.
+- Segment customers based on churn behavior.
+
+### Churn Analysis
+- Calculate overall churn rate.
+- Identify high-churn customer groups.
+- Analyze churn by:
+  - Contract Type
+  - Customer Segment
+  - Subscription Plan
+  - Engagement Level
+  - Payment Method
+  - Acquisition Channel
+  - Tenure
+  - Support Satisfaction
+  - Failed Payments
+
+### Revenue Analytics
+- Calculate total net revenue.
+- Measure revenue associated with churned customers.
+- Identify high-value churned customers.
+- Quantify revenue exposure associated with customer churn.
+
+### Predictive Analytics
+- Build a leakage-free churn prediction dataset.
+- Compare Logistic Regression and Random Forest.
+- Evaluate ROC-AUC and PR-AUC.
+- Optimize the classification threshold.
+- Analyze feature importance.
+- Explain model behavior using SHAP.
+
+---
+
+# 🏗️ End-to-End Architecture
 
 ```text
                     RAW CUSTOMER DATA
                            │
                            ▼
-                  ┌─────────────────┐
-                  │ DATA PROFILING  │
-                  └────────┬────────┘
+                  DATA PROFILING
                            │
                            ▼
-                  ┌─────────────────┐
-                  │ DATA CLEANING   │
-                  └────────┬────────┘
+                    DATA CLEANING
                            │
                            ▼
-                  ┌─────────────────┐
-                  │ DATA VALIDATION │
-                  └────────┬────────┘
+               AUTOMATED DATA VALIDATION
                            │
                            ▼
-                  ┌─────────────────┐
-                  │   POSTGRESQL    │
-                  └────────┬────────┘
+                      POSTGRESQL
                            │
+              ┌────────────┼────────────┐
+              │            │            │
+              ▼            ▼            ▼
+        SQL ANALYSIS   CUSTOMER 360   INDEXING
+              │            │
+              └────────────┼────────────┘
                            ▼
-                  ┌─────────────────┐
-                  │ CUSTOMER 360    │
-                  │     VIEW        │
-                  └────────┬────────┘
+                  ADVANCED ANALYTICS
                            │
-                           ▼
-                  ┌─────────────────┐
-                  │ ANALYTICAL SQL  │
-                  └────────┬────────┘
-                           │
-                           ▼
-                  ┌─────────────────┐
-                  │     POWER BI    │
-                  └────────┬────────┘
-                           │
-                           ▼
-                  ┌─────────────────┐
-                  │ BUSINESS        │
-                  │ INSIGHTS        │
-                  └─────────────────┘
+              ┌────────────┴────────────┐
+              ▼                         ▼
+        STATISTICAL ANALYSIS       ML DATASET
+                                        │
+                                        ▼
+                              LEAKAGE-FREE ML
+                                        │
+                         ┌──────────────┴──────────────┐
+                         ▼                             ▼
+                LOGISTIC REGRESSION              RANDOM FOREST
+                         │                             │
+                         └──────────────┬──────────────┘
+                                        ▼
+                              MODEL EVALUATION
+                                        │
+                         ┌──────────────┼──────────────┐
+                         ▼              ▼              ▼
+                    ROC / PR       Threshold       Feature
+                     Curves         Analysis       Importance
+                                        │
+                                        ▼
+                                SHAP EXPLAINABILITY
+                                        │
+                                        ▼
+                               BUSINESS INSIGHTS
+                                        │
+                                        ▼
+                                  POWER BI
+                                   DASHBOARD
